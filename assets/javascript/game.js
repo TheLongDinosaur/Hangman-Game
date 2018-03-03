@@ -23,10 +23,10 @@ function startGame () {
 		blanksAndSuccesses.push("_");
 }
 
-	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-	document.getElementById("numGuesses").innerHTML = guessesLeft;
-	document.getElementById("winCounter").innerHTML = winCount;
-	document.getElementById("lossCounter").innerHTML = lossCount;
+	document.getElementById("wordToGuess").innerHTML=blanksAndSuccesses.join(" ");
+	document.getElementById("numGuesses").innerHTML=guessesLeft;
+	document.getElementById("winCounter").innerHTML=winCount;
+	document.getElementById("lossCounter").innerHTML=lossCount;
 }
 
 function checkLetter(letter) {
@@ -56,9 +56,9 @@ function checkLetter(letter) {
         console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left " + numGuesses);
     }
 
-    document.getElementById("numGuesses").innerHTML = guessesLeft;
-    document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-    document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
+    document.getElementById("numGuesses").innerHTML=guessesLeft;
+    document.getElementById("wordToGuess").innerHTML=blanksAndSuccesses.join(" ");
+    document.getElementById("wrongGuesses").innerHTML=wrongLetters.join(" ");
 
     if (lettersInWord.toString() == blanksAndSuccesses.toString()) {
         winCount++
@@ -78,7 +78,8 @@ function checkLetter(letter) {
 
 startGame();
 
-document.onkeyup = function(event) {
+//Could not get any of my keyclicks to register.  Not sure what I'm missing. :-(
+document.onkeyup=function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetter(letterGuessed);
 	roundComplete();
